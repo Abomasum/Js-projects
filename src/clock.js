@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './Clock.css';
 
 const Clock = () => {
   
@@ -24,9 +24,9 @@ const Clock = () => {
   }${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 
   return (
-    <div style={{ textAlign: 'center', fontFamily: 'Arial', padding: '50px', color: '#2c3e50',}}>
-      <h1>Digital Clock</h1>
-      <h2>{formattedTime}</h2>
+    <div className="clock-container">
+      <h1 className="clock-title">Digital Clock</h1>
+      <h2 className="clock-time">{formattedTime}</h2>
     </div>
   );
 };
